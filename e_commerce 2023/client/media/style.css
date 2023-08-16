@@ -1,0 +1,35 @@
+/*prducts style*/
+.card-products-container {
+    margin: 5vh auto;
+}
+
+.card-products {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card-products img {
+    margin-top: 2.5rem;
+    width: 15.625rem;
+    height: 15.625rem;
+}
+
+.card-products button {
+    border: none;
+    outline: 0;
+    padding: 0.625rem;
+    color: #fff;
+    background-color: #1bcb7f;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1rem;
+
+}
+
+.card-products button:hover {
+    opacity: 0,7;
+}
