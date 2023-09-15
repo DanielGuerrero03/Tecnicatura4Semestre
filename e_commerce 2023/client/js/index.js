@@ -16,14 +16,25 @@ productos.forEach((producto) => {
     content.append(buyButton);
 
     buyButton.addEventListener('click', () => {
-        cart.push({
-            id: producto.id,
-            productName: producto.productName,
-            price: producto.price,
-            quanty: producto.quanty,
-            img: producto.img,
+        const repeat = cart.some((repeatProduct) => repeatProduct.id === producto.id)
+        if (repeat) {
+            cart.map((prod) => {
+                if (prod.id === producto.id) {
+                    prod.quanty++;
+                    displayCartCounter();
+                }
+            });
+        } else {
+            cart.push({
+                id: producto.id,
+                productName: producto.productName,
+                price: producto.price,
+                quanty: producto.quanty,
+                img: producto.img,
+            });
+            displayCartCounter();
+        }
+    });
+});
 
-        })
-        console.log(cart);
-});
-});
+
