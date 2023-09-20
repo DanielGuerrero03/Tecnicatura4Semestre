@@ -1,57 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ddfc0c2-2df3-432b-b564-a8066a28a686" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/estudiantes/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/estudiantes/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/estudiantes/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/estudiantes/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/estudiantes/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/estudiantes/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/estudiantes/src/main/java/utn/estudiantes/EstudiantesApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/estudiantes/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/estudiantes/src/test/java/utn/estudiantes/EstudiantesApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../LeccionSist-Est/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../LeccionSist-Est/.idea/Leccion01.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../LeccionSist-Est/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../LeccionSist-Est/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../LeccionSist-Est/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../LeccionSist-Est/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../LeccionSist-Est/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../LeccionSist-Est/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../LeccionSist-Est/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../LeccionSist-Est/SistemaEstudiantes/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../LeccionSist-Est/SistemaEstudiantes/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../LeccionSist-Est/SistemaEstudiantes/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../LeccionSist-Est/SistemaEstudiantes/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../LeccionSist-Est/SistemaEstudiantes/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../LeccionSist-Est/SistemaEstudiantes/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../LeccionSist-Est/SistemaEstudiantes/src/main/java/UTN/conexion/Conexion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../LeccionSist-Est/SistemaEstudiantes/src/main/java/UTN/datos/EstudianteDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../LeccionSist-Est/SistemaEstudiantes/src/main/java/UTN/dominio/Estudiante.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../LeccionSist-Est/SistemaEstudiantes/src/main/java/UTN/presentacion/SistemaEstudiantesApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Leccion01.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SistemaEstudiantes/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SistemaEstudiantes/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SistemaEstudiantes/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SistemaEstudiantes/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SistemaEstudiantes/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SistemaEstudiantes/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SistemaEstudiantes/src/main/java/UTN/conexion/Conexion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SistemaEstudiantes/src/main/java/UTN/datos/EstudianteDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SistemaEstudiantes/src/main/java/UTN/dominio/Estudiante.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SistemaEstudiantes/src/main/java/UTN/presentacion/SistemaEstudiantesApp.java" beforeDir="false" />
+    <list default="true" id="0705ec44-0140-4f38-b4df-81f59f7a4d4a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estudiantes/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/estudiantes/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estudiantes/src/main/resources/logback-spring.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../e_commerce 2023/client/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../e_commerce 2023/client/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,80 +15,28 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="useMavenConfig" value="true" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
-  <component name="ProjectId" id="2UAhx8ryFkqG6s5rrZqNi4CBAjU" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="2VdRXBJwpGEMeZpH2mg8TAk3ZE0" />
   <component name="ProjectViewState">
+    <option name="flattenPackages" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+    <option name="showVisibilityIcons" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/DANIEL/Tecnicatura4Semestre/Java_4/Leccion01/estudiantes",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+    "last_opened_file_path": "C:/Users/DANIEL/Tecnicatura4Semestre/Java_4/Leccion01/estudiantes"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.SistemaEstudiantesApp">
-    <configuration name="EstudianteDAO" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="UTN.datos.EstudianteDAO" />
-      <module name="estudiante" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="UTN.datos.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SistemaEstudiantesApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="UTN.presentacion.SistemaEstudiantesApp" />
-      <module name="estudiante" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="UTN.presentacion.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.SistemaEstudiantesApp" />
-        <item itemvalue="Application.EstudianteDAO" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="4ddfc0c2-2df3-432b-b564-a8066a28a686" name="Changes" comment="" />
-      <created>1692388535856</created>
+      <changelist id="0705ec44-0140-4f38-b4df-81f59f7a4d4a" name="Changes" comment="" />
+      <created>1695164008335</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1692388535856</updated>
+      <updated>1695164008335</updated>
     </task>
     <servers />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
