@@ -19,7 +19,7 @@ public class Libro {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Integer idLibro;
     String nombreLibro;
-    String autorLibro;
+    String autor;
     Double precio;
     Integer existencias;
 }
