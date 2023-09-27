@@ -4,7 +4,7 @@ import utn.tienda_libros.modelo.Libro;
 
 import java.util.List;
 
-public interface IILibroServicio {
+public interface ILibroServicio {
 
     public List<Libro> listarLibros();
 
