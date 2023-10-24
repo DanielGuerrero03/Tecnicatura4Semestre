@@ -5,7 +5,7 @@ import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ConfigurableApplicationContext;
-import utn.tienda_libros.vista.LibroFrom;
+import utn.tienda_libros.vista.LibroForm;
 
 import java.awt.EventQueue;
 
@@ -13,8 +13,7 @@ import java.awt.EventQueue;
 public class TiendaLibrosApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TiendaLibrosApplication.class, args);
-	}
+
 		ConfigurableApplicationContext contextoSring =
 				new SpringApplicationBuilder(TiendaLibrosApplication.class)
 						.headless(false)
@@ -22,8 +21,12 @@ public class TiendaLibrosApplication {
 						.run(args);
 
 	//Ejecutamos el codigo para cargar el formulario
-	EventQueue.invokeLater(() -> {
+	EventQueue.invokeLater(() -> { // Metodo Lambda
 		//Obetenemos el objeto form a traves del spring
-		LibroFrom libroFrom = contextoSring.getBean(LibroFrom.class);
-	})
+		LibroForm libroFrom = contextoSring.getBean(LibroForm.class);
+		libroFrom.setVisible(true);
+	});
+	}
+
 }
+
