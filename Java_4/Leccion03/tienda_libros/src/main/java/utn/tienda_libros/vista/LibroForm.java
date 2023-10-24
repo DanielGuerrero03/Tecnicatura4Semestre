@@ -1,5 +1,4 @@
 package utn.tienda_libros.vista;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import utn.tienda_libros.modelo.Libro;
@@ -8,12 +7,15 @@ import utn.tienda_libros.servicio.LibroServicio;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 @Component
 public class LibroForm extends JFrame {
     LibroServicio libroServicio;
     private JPanel panel;
     private JTable tablaLibros;
+    private JTextField idTexto;
     private JLabel Libro;
     private JTextField libroTexto;
     private JTextField autorTexto;
@@ -30,6 +32,13 @@ public class LibroForm extends JFrame {
         this.libroServicio = libroServicio;
         iniciarForma();
         agregarButton.addActionListener(e -> agregarLibro());
+        tablaLibros.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                cargarLibroSeleccionado();
+            }
+        });
     }
 
     private void iniciarForma() {
@@ -59,14 +68,23 @@ public class LibroForm extends JFrame {
         //Crear el objeto libro
         var libro = new Libro(null, nombreLibro, autor, precio, existencias);
         //Esto es otra forma de hacerlo
-       // libro.setNombreLibro(nombreLibro);
-       // libro.setAutor(autor);
-       // libro.setPrecio(precio);
-       // libro.setExistencias(existencias);
+        // libro.setNombreLibro(nombreLibro);
+        // libro.setAutor(autor);
+        // libro.setPrecio(precio);
+        // libro.setExistencias(existencias);
         this.libroServicio.guardarLibro(libro);
         mostrarMensaje("Libro guardado con exito");
         limpiarFormulario();
         litarLibros();
+    }
+
+    private void cargarLibroSeleccionado() {
+        //Los indices de las columnas empiezan en 0
+        var renglon = tablaLibros.getSelectedRow();
+        if (renglon != -1){
+            String idLibro = tablaLibros.getModel().getValueAt(renglon, 0).toString();
+        }
+
     }
     private void limpiarFormulario() {
         libroTexto.setText("");
@@ -79,6 +97,8 @@ public class LibroForm extends JFrame {
         JOptionPane.showMessageDialog(this, mensaje);
     }
     private void createUIComponents() {
+        idTexto = new JTextField("");
+        idTexto.setVisible(false);
         this.tablaModeloLibros = new DefaultTableModel(0, 5);
         String[] cabecera = {"Id", "Libro", "Autor", "Precio", "Existencias"};
         this.tablaModeloLibros.setColumnIdentifiers(cabecera);
