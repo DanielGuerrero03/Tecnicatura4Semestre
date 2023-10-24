@@ -2,6 +2,7 @@ package utn.tienda_libros.vista;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import utn.tienda_libros.modelo.Libro;
 import utn.tienda_libros.servicio.LibroServicio;
 
 import javax.swing.*;
@@ -13,6 +14,14 @@ public class LibroForm extends JFrame {
     LibroServicio libroServicio;
     private JPanel panel;
     private JTable tablaLibros;
+    private JLabel Libro;
+    private JTextField libroTexto;
+    private JTextField autorTexto;
+    private JTextField precioTexto;
+    private JTextField existenciasTexto;
+    private JButton agregarButton;
+    private JButton modificarButton;
+    private JButton eliminarButton;
     private DefaultTableModel tablaModeloLibros;
 
 
@@ -20,6 +29,7 @@ public class LibroForm extends JFrame {
     public LibroForm(LibroServicio libroServicio) {
         this.libroServicio = libroServicio;
         iniciarForma();
+        agregarButton.addActionListener(e -> agregarLibro());
     }
 
     private void iniciarForma() {
@@ -35,6 +45,39 @@ public class LibroForm extends JFrame {
         setLocation(x, y);
     }
 
+    private void agregarLibro() {
+        //Leer los valores del formulario
+        if (libroTexto.getText().equals("")){
+            mostrarMensaje("Ingresa nombre del libro");
+            libroTexto.requestFocusInWindow();
+            return;
+        }
+        var nombreLibro = libroTexto.getText();
+        var autor = autorTexto.getText();
+        var precio = Double.parseDouble(precioTexto.getText());
+        var existencias = Integer.parseInt(existenciasTexto.getText());
+        //Crear el objeto libro
+        var libro = new Libro(null, nombreLibro, autor, precio, existencias);
+        //Esto es otra forma de hacerlo
+       // libro.setNombreLibro(nombreLibro);
+       // libro.setAutor(autor);
+       // libro.setPrecio(precio);
+       // libro.setExistencias(existencias);
+        this.libroServicio.guardarLibro(libro);
+        mostrarMensaje("Libro guardado con exito");
+        limpiarFormulario();
+        litarLibros();
+    }
+    private void limpiarFormulario() {
+        libroTexto.setText("");
+        autorTexto.setText("");
+        precioTexto.setText("");
+        existenciasTexto.setText("");
+    }
+
+    private void mostrarMensaje(String mensaje) {
+        JOptionPane.showMessageDialog(this, mensaje);
+    }
     private void createUIComponents() {
         this.tablaModeloLibros = new DefaultTableModel(0, 5);
         String[] cabecera = {"Id", "Libro", "Autor", "Precio", "Existencias"};
