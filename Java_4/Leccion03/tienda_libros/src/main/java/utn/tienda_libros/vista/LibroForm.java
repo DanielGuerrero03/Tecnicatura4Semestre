@@ -7,6 +7,8 @@ import utn.tienda_libros.servicio.LibroServicio;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
@@ -39,6 +41,8 @@ public class LibroForm extends JFrame {
                 cargarLibroSeleccionado();
             }
         });
+        modificarButton.addActionListener( e -> modificarLibro());
+        eliminarButton.addActionListener(e -> eliminarLibro());
     }
 
     private void iniciarForma() {
@@ -75,7 +79,7 @@ public class LibroForm extends JFrame {
         this.libroServicio.guardarLibro(libro);
         mostrarMensaje("Libro guardado con exito");
         limpiarFormulario();
-        litarLibros();
+        listarLibros();
     }
 
     private void cargarLibroSeleccionado() {
@@ -83,8 +87,62 @@ public class LibroForm extends JFrame {
         var renglon = tablaLibros.getSelectedRow();
         if (renglon != -1){
             String idLibro = tablaLibros.getModel().getValueAt(renglon, 0).toString();
+            idTexto.setText(idLibro);
+            String nombreLibro = tablaLibros.getModel().getValueAt(renglon, 1).toString();
+            libroTexto.setText(nombreLibro);
+            String autor = tablaLibros.getModel().getValueAt(renglon, 2).toString();
+            autorTexto.setText(autor);
+            String precio = tablaLibros.getModel().getValueAt(renglon, 3).toString();
+            precioTexto.setText(precio);
+            String existencias = tablaLibros.getModel().getValueAt(renglon, 4).toString();
+            existenciasTexto.setText(existencias);
         }
 
+    }
+
+    private void modificarLibro(){
+        if (idTexto.getText().equals("")){
+            mostrarMensaje("Selecciona un libro de la tabla");
+
+        }
+        else {
+            //Verificamos que el nombre del libro no sea nulo
+            if (libroTexto.getText().equals("")){
+                mostrarMensaje("Ingresa nombre del libro");
+                libroTexto.requestFocusInWindow();
+                return;
+            }
+            // Llenamos el objeto libro a actualizar
+            int idLibro = Integer.parseInt(idTexto.getText());
+            var nombreLibro = libroTexto.getText();
+            var autor = autorTexto.getText();
+            var precio = Double.parseDouble(precioTexto.getText());
+            var existencias = Integer.parseInt(existenciasTexto.getText());
+            var libro = new Libro(idLibro, nombreLibro, autor, precio, existencias);
+            //Actualizamos el libro
+            this.libroServicio.guardarLibro(libro);
+            mostrarMensaje("Libro actualizado con exito");
+            limpiarFormulario();
+            listarLibros();
+        }
+
+    }
+
+    private void eliminarLibro() {
+        var renglon = tablaLibros.getSelectedRow();
+        if (renglon != -1){
+            String idLibro = tablaLibros.getModel().getValueAt(renglon, 0).toString();
+
+            var libro = new Libro();
+            libro.setIdLibro(Integer.parseInt(idLibro));
+            libroServicio.eliminarLibro(libro);
+            mostrarMensaje("Libro "+ idLibro + " eliminado con exito");
+            limpiarFormulario();
+            listarLibros();
+        }
+        else {
+            mostrarMensaje("Selecciona un libro de la tabla a eliminar");
+        }
     }
     private void limpiarFormulario() {
         libroTexto.setText("");
@@ -99,15 +157,26 @@ public class LibroForm extends JFrame {
     private void createUIComponents() {
         idTexto = new JTextField("");
         idTexto.setVisible(false);
-        this.tablaModeloLibros = new DefaultTableModel(0, 5);
+        this.tablaModeloLibros = new DefaultTableModel(0, 5){
+            //Para que no se pueda editar la fila
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                return false;
+            }
+        };
         String[] cabecera = {"Id", "Libro", "Autor", "Precio", "Existencias"};
         this.tablaModeloLibros.setColumnIdentifiers(cabecera);
-        //intanciar el objeto de Jtable
+
+        //instanciar el objeto de Jtable
         this.tablaLibros = new JTable(this.tablaModeloLibros);
-        litarLibros();
+        //Evitamos que el usuario pueda seleccionar varios registros
+        tablaLibros.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+
+        //Llenar la tabla con los libros
+        listarLibros();
     }
 
-    private void litarLibros() {
+    private void listarLibros() {
         //Limpiar la tabla
         tablaModeloLibros.setRowCount(0);
         //Obtener los libros de la base de datos
