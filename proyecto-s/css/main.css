@@ -2,11 +2,26 @@ body {
   background-color: rgb(241, 208, 115);
   margin: 0;
   padding: 0;
+  font-family: "IBM Plex Sans", sans-serif;
+  color: rgb(63, 38, 1);
 }
 
 nav {
+  display: flex;
   width: 100%;
-  height: 100px;
+  height: 100%;
+  justify-content: space-between;
+}
+nav p {
+  font-size: 1.5;
+  padding-left: 30px;
+}
+nav .icons {
+  display: flex-end;
+  gap: 15px;
+  margin-top: 10px;
+  background: none;
+  border-style: none;
 }
 
 main {
@@ -17,4 +32,98 @@ footer {
   background-color: rgb(199, 116, 20);
   width: 100%;
   height: 250px;
+}
+
+article {
+  width: auto;
+  color: rgb(63, 38, 1);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 45px;
+  padding-right: 45px;
+  padding-top: 70px;
+}
+article .info-section {
+  display: flex;
+  flex-direction: row;
+  padding-top: 50px;
+  gap: 25px;
+}
+article h1 {
+  font-size: 3em;
+  padding: 0px;
+  margin: 0px;
+}
+article p {
+  font-size: 1.5em;
+}
+article button {
+  width: 200px;
+  padding: 20px;
+  background-color: rgb(199, 116, 20);
+  background: none;
+  border-style: none;
+  border-radius: 35px;
+  font-size: 1em;
+  cursor: pointer;
+}
+article .imagen-section {
+  width: 50%;
+  background-color: rgb(119, 109, 64);
+}
+article img {
+  width: 25vw;
+  border-radius: 19px;
+}
+
+section {
+  width: auto;
+  height: auto;
+  padding: 60px;
+  background-color: skyblue;
+}
+section .section1 h2, section .section2 h2 {
+  color: rgb(63, 38, 1);
+  font-size: 2em;
+}
+section .section1 .card-section, section .section2 .card-section {
+  display: flex;
+  width: auto;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 200px;
+       column-gap: 200px;
+  row-gap: 200px;
+}
+section .section1 .product-card, section .section2 .product-card {
+  width: 14vw;
+  height: 45vh;
+  background-color: rgb(224, 124, 31);
+  color: rgb(63, 38, 1);
+  padding: 20px;
+  border-radius: 8px;
+}
+section .section1 .product-card .icons, section .section2 .product-card .icons {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 12px;
+}
+section .section1 .product-card .icons svg, section .section2 .product-card .icons svg {
+  width: 28px;
+  height: 28px;
+  stroke: olive;
+  stroke-width: yellow;
+  cursor: pointer;
+}
+section .section1 .product-card img, section .section2 .product-card img {
+  width: 12vw;
+  height: 30vh;
+  border-radius: 6px;
+}
+section .section2 .product-card {
+  background-color: rgb(241, 208, 115);
 }/*# sourceMappingURL=main.css.map */
